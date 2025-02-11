@@ -1,0 +1,96 @@
+body {
+  background-color: #1b1b1b;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Center the TV on the page */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* TV Container */
+.tv-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 500px;
+  height: 375px;
+  background: #222;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border: 10px solid #444;
+}
+
+/* TV Frame */
+.tv-frame {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #555, #222);
+  border-radius: 15px;
+  position: relative;
+  padding: 15px;
+}
+
+/* TV Screen */
+.screen {
+  width: 100%;
+  height: 80%;
+  background: black;
+  border-radius: 10px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.screen iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+/* TV Buttons */
+.tv-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: black;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.red {
+  background: red;
+}
+.green {
+  background: green;
+}
+.yellow {
+  background: yellow;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .tv-container {
+    width: 90%;
+    height: 250px;
+  }
+}
