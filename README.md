@@ -2,8 +2,6 @@
 
 David Lynch's Daily Weather Report
 
-David Lynch's Daily Weather Report
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
