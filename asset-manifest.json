@@ -6,8 +6,5 @@
     "main.6049ff6c.css.map": "/lynchian/static/css/main.6049ff6c.css.map",
     "main.97952512.js.map": "/lynchian/static/js/main.97952512.js.map"
   },
-  "entrypoints": [
-    "static/css/main.6049ff6c.css",
-    "static/js/main.97952512.js"
-  ]
+  "entrypoints": ["static/css/main.6049ff6c.css", "static/js/main.97952512.js"]
 }
