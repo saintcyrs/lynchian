@@ -8,7 +8,7 @@ const App: React.FC = () => {
     // Fetch today's video from videos.json
     const fetchVideo = async () => {
       try {
-        const response = await fetch("/videos.json");
+        const response = await fetch("videos.json");
         const videoData = await response.json();
         const today = new Date().toLocaleDateString("en-CA").slice(5, 10);
 
