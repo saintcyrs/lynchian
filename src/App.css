@@ -1,0 +1,174 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Theater Container with Surreal Darkness */
+.theater-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  background: radial-gradient(circle, #111 30%, black 100%);
+  overflow: hidden;
+  filter: contrast(90%);
+}
+
+/* Theater Title - Faint and Hypnotic */
+.theater-title {
+  font-size: 5rem;
+  margin-bottom: 40px;
+  color: red;
+  text-shadow: 2px 2px 6px rgba(21, 255, 0, 0.598);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Theater Curtains - Rich Lynchian Red */
+.curtain {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  top: 0;
+  background: linear-gradient(to right, #550000, #8b0000);
+  transition: transform 2s ease-in-out;
+  z-index: 20;
+}
+
+.curtain-left {
+  left: 0;
+  transform: translateX(0);
+  animation: open-left 2s ease-in-out forwards;
+}
+
+.curtain-right {
+  right: 0;
+  transform: translateX(0);
+  animation: open-right 2s ease-in-out forwards;
+}
+
+@keyframes open-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes open-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* TV Glitch Effect */
+.glitch {
+  animation: glitch 0.5s infinite alternate;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translateX(1px) translateY(-1px);
+  }
+  100% {
+    transform: translateX(-1px) translateY(1px);
+  }
+}
+
+/* CRT Screen Curvature */
+.crt {
+  border-radius: 10px;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.1);
+  height: 80%;
+}
+
+/* CRT Screen Scan Lines */
+/* Ensure CRT scan lines do not block interaction */
+.crt::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(0, 0, 0, 0.03) 2px
+  );
+  z-index: 1;
+  opacity: 0.3;
+  pointer-events: none; /* Ensure clicks pass through */
+}
+
+/* YouTube Video */
+.youtube-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* TV Knobs */
+.tv-knobs {
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+}
+.tv-frame {
+  height: 90%;
+}
+
+.knob {
+  width: 25px;
+  height: 25px;
+  background: black;
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.red {
+  background: red;
+}
+.green {
+  background: green;
+}
+.yellow {
+  background: yellow;
+}
+
+/* TV Legs */
+.tv-legs {
+  position: absolute;
+  bottom: -80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.leg {
+  width: 12px;
+  height: 100px;
+  background: linear-gradient(to bottom, #654321, #3e2c1c);
+  border-radius: 5px;
+}
+
+.left {
+  transform: rotate(10deg);
+}
+
+.right {
+  transform: rotate(-10deg);
+}
