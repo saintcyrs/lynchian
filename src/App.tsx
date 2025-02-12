@@ -5,12 +5,11 @@ const App: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    // Fetch today's video from videos.json
     const fetchVideo = async () => {
       try {
-        const response = await fetch("videos.json");
+        const response = await fetch(`${process.env.PUBLIC_URL}/videos.json`);
         const videoData = await response.json();
-        const today = new Date().toLocaleDateString("en-CA").slice(5, 10);
+        const today = new Date().toISOString().slice(5, 10);
 
         if (videoData[today]) {
           const videos: string[] = videoData[today];
