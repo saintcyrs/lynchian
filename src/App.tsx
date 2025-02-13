@@ -5,12 +5,18 @@ const App: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
   useEffect(() => {
+    // Get today's date in local time zone (MM-DD format)
+    const today = new Intl.DateTimeFormat("en-CA", {
+      month: "2-digit",
+      day: "2-digit",
+    })
+      .format(new Date())
+      .replace("/", "-");
+
     const fetchVideo = async () => {
       try {
         const response = await fetch(`${process.env.PUBLIC_URL}/videos.json`);
         const videoData = await response.json();
-        const today = new Date().toISOString().slice(5, 10);
-
         if (videoData[today]) {
           const videos: string[] = videoData[today];
           const randomVideoUrl =

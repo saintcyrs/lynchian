@@ -89,7 +89,6 @@ body {
 .crt {
   border-radius: 10px;
   box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.1);
-  height: 80%;
 }
 
 /* CRT Screen Scan Lines */
@@ -107,6 +106,10 @@ body {
   z-index: 1;
   opacity: 0.3;
   pointer-events: none; /* Ensure clicks pass through */
+}
+
+.tv-screen {
+  height: 80%;
 }
 
 /* YouTube Video */
