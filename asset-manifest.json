@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/lynchian/static/css/main.6049ff6c.css",
-    "main.js": "/lynchian/static/js/main.97952512.js",
+    "main.css": "/lynchian/static/css/main.c0e7a9d5.css",
+    "main.js": "/lynchian/static/js/main.34ddc3b0.js",
     "index.html": "/lynchian/index.html",
-    "main.6049ff6c.css.map": "/lynchian/static/css/main.6049ff6c.css.map",
-    "main.97952512.js.map": "/lynchian/static/js/main.97952512.js.map"
+    "main.c0e7a9d5.css.map": "/lynchian/static/css/main.c0e7a9d5.css.map",
+    "main.34ddc3b0.js.map": "/lynchian/static/js/main.34ddc3b0.js.map"
   },
-  "entrypoints": ["static/css/main.6049ff6c.css", "static/js/main.97952512.js"]
+  "entrypoints": [
+    "static/css/main.c0e7a9d5.css",
+    "static/js/main.34ddc3b0.js"
+  ]
 }
